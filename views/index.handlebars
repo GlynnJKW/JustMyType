@@ -32,14 +32,20 @@
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		{{#each projects}}
-		<div	class="project"	id="{{id}}">
-			<a	href="project/{{name}}"	class="thumbnail">
-				<img	src="images/{{image}}"	class="img">
-				<p>{{name}}</p>
-			</a>
+		<div>
+			{{#each projects}}
+			<div	class="project"	id="{{id}}">
+				<a	href="project/{{name}}"	class="thumbnail">
+					<img	src="images/{{image}}"	class="img">
+					<p>{{name}}</p>
+				</a>
+			</div>
+			{{/each}}
 		</div>
-		{{/each}}
+
+		<div>
+			<button type="button" href="#" class="btn btn-primary">Log In</button>
+		</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
