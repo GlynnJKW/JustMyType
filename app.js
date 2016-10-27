@@ -14,6 +14,7 @@ var login = require('./routes/login');
 var profile = require('./routes/profile');
 var mbti = require('./routes/mbti');
 var istj = require('./routes/istj');
+var mbtiname = require('./routes/mbtiname');
 /*The 16 personalities
 var istj = require('./routes/istj');
 var isfj = require('./routes/isfj');
@@ -58,11 +59,11 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:name', project.viewProject)
+//app.get('/project/:name', project.viewProject)
 app.get('/login', login.view);
 app.get('/profile', profile.view);
 app.get('/mbti', mbti.view);
-app.get('/istj', istj.view);
+app.get('/mbti/:name', mbtiname.view);
 // Example route
 // app.get('/users', user.list);
 
