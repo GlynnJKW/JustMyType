@@ -15,7 +15,7 @@ var profile = require('./routes/profile');
 var mbti = require('./routes/mbti');
 var istj = require('./routes/istj');
 var mbtiname = require('./routes/mbtiname');
-var profileOption = require('./routes/profileoption');
+var profileOption = require('./routes/profileOption');
 var chat = require('./routes/chat');
 var matches = require('./routes/matches');
 /*The 16 personalities
