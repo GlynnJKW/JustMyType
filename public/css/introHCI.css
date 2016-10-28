@@ -91,6 +91,8 @@
 	background-color:#cccccc;
 	height:78vh;
 	margin: 1vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .view-edit-profile{
@@ -104,5 +106,8 @@
 	height: 50%;
 }
 
-.view-edit-profile a{
+.bottom-profile{
+	height: 50%;
+	width: 100%;
+	text-align: left;
 }
