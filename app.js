@@ -16,6 +16,8 @@ var mbti = require('./routes/mbti');
 var istj = require('./routes/istj');
 var mbtiname = require('./routes/mbtiname');
 var profileOption = require('./routes/profileoption');
+var chat = require('./routes/chat');
+var matches = require('./routes/matches');
 /*The 16 personalities
 var istj = require('./routes/istj');
 var isfj = require('./routes/isfj');
@@ -66,6 +68,8 @@ app.get('/profile', profile.view);
 app.get('/mbti', mbti.view);
 app.get('/mbti/:name', mbtiname.view);
 app.get('/profile/:name', profileOption.view);
+app.get('/chat', chat.view);
+app.get('/matches', matches.view);
 // Example route
 // app.get('/users', user.list);
 
