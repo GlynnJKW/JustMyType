@@ -43,3 +43,53 @@
 	font-family: "Georgia", serif;
 	margin: 0 auto;
 }
+
+.topthing{
+	text-align: center;
+	background-color: #008080;
+}
+
+.navigation{
+	height: 70px;
+	list-style: none;
+  float: left;
+	margin: 0;
+  padding: 0;
+
+  border-width: 1px 0;
+  text-align: center;
+
+  font-size: 22px;
+  font-family: 'Cham-WebFont', Arial, sans-serif;
+  background-color: #008080;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navigation li {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+	 background-color: #cccccc;
+	 border: 3px solid #008080;
+   float   : left;
+   width   : 25%;
+   padding : 15px; /* this will be applied internally, due to
+                      box-sizing property */
+}
+
+.navigation li a{
+	text-decoration: none;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.center-profile{
+	background-color:#cccccc;
+	height:78vh;
+	margin: 1vh;
+}
