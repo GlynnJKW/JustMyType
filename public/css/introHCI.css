@@ -96,9 +96,8 @@
 
 .center-profile{
 	background-color:#cccccc;
-	height:77vh;
+	height:98vh;
 	margin: 1vh;
-	padding: 1vh;
 	display: flex;
 	border-radius: 10%;
 	flex-direction: column;
