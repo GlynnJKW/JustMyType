@@ -50,20 +50,25 @@
 }
 
 .navigation{
-	height: 70px;
-	list-style: none;
-  float: left;
-  padding: 5px;
+	list-style-type: none;
+	float: left;
 
-  border-width: 1px 0;
-  text-align: center;
+	border-width: 1px 0;
+	text-align: center;
 
-  font-size: 22px;
-  font-family: 'Cham-WebFont', Arial, sans-serif;
-  background-color: #008080;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+	font-size: 22px;
+	font-family: 'Cham-WebFont', Arial, sans-serif;
+	background-color: inherit;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.navigation ul{
+	list-style-type: none;
+	float: left;
+	width: 100%;
+	padding: 0 5px;
 }
 
 .navigation li {
@@ -72,10 +77,12 @@
    box-sizing: border-box;
 
 	 background-color: #cccccc;
-	 border: 3px solid #008080;
+	 border: 3px solid black;
+	 border-radius: 20%;
    float   : left;
-   width   : 25%;
-   padding : 15px; /* this will be applied internally, due to
+   width   : 24%;
+	 margin: 0 0.5%;
+   padding : 10px; /* this will be applied internally, due to
                       box-sizing property */
 }
 
@@ -91,7 +98,9 @@
 	background-color:#cccccc;
 	height:77vh;
 	margin: 1vh;
+	padding: 1vh;
 	display: flex;
+	border-radius: 10%;
 	flex-direction: column;
 }
 
