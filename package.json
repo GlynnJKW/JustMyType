@@ -1,0 +1,26 @@
+{
+  "name": "justmytype",
+  "description": "mobile web app",
+  "version": "0.0.1",
+  "author": "Glynn <gjwillia.ucsd.edu>",
+
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/WEDSGARBAGEDAY/JustMyType"
+  },
+  "license": "MIT",
+
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
+  },
+  "engines": {
+  	"node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
