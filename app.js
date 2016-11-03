@@ -18,6 +18,8 @@ var mbtiname = require('./routes/mbtiname');
 var profileOption = require('./routes/profileOption');
 var chat = require('./routes/chat');
 var matches = require('./routes/matches');
+var preferences = require('./routes/preferences');
+var editprofile = require('./routes/editprofile');
 /*The 16 personalities
 var istj = require('./routes/istj');
 var isfj = require('./routes/isfj');
@@ -67,7 +69,9 @@ app.get('/login', login.view);
 app.get('/profile', profile.view);
 app.get('/mbti', mbti.view);
 app.get('/mbti/:name', mbtiname.view);
-app.get('/profile/:name', profileOption.view);
+//app.get('/profile/:name', profileOption.view);
+app.get('/profile/preferences', preferences.view);
+app.get('/profile/edit', editprofile.view);
 app.get('/chat', chat.view);
 app.get('/matches', matches.view);
 // Example route

@@ -28,16 +28,19 @@
 		</div>
 
 		<div class="login" style="max-width:400px">
-			<form action="/profile" id="loginform">
+			<!--<form action="/profile" id="loginform">-->
 				<div>
-					<p>Username: <input type="text" name="User" value=""></p>
-					<p>Password: <input type="password" name="Pass" value=""></p>
+					<p>Username: <input type="text" name="User" value="" id="username"></p>
+					<p>Password: <input type="password" name="Pass" value="" id="password"></p>
 				</div>
-				<input type="submit" value="Submit" class="btn btn-primary btn-lg btn-block"></input>
-			</form>
+				<div id="loginbutton">
+					<button class="btn btn-primary btn-lg btn-block" onclick="login()">Login</button>
+				</div>
+			<!--</form>-->
 		</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/user.js"></script>
 </body>
 </html>
