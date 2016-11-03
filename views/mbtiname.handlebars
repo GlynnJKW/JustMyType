@@ -12,12 +12,30 @@
 
 <body>
 
-	<h1>{{Name}}</h1>
+	<h1 style = "font-size:25; text-align: center">{{Name}}</h1>
 
-	<h2>{{Description}}</h2>
+	<p id = "flow" style = "font-size:15; text-align: center; width: 25%; margin: 0 auto;">
+		{{Description}}
+	</p>
+	
+<hr width = "60%" color = "blue" size = "5">
+
+	<div id = "flow" style = "font-size:15; text-align: center; width: 25%; margin: 0 auto;">
+		Compatability
+		<br>
+		{{Compatability}}
+	</div>
+
+
 		<a href="/mbti" class="btn btn-danger btn-lg btn-block">Back</a>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/flowtype.js"></script>
+	<script>
+	$("#flow").flowtype();
+	minFont : 20,
+	maxFont : 30
+	</script>
 </body>
 </html>
