@@ -6,7 +6,8 @@
       "gender": "Male",
       "age": "20",
       "mbti": "INTJ",
-      "image": ""
+      "image": "",
+      "search": "ESFP"
     },
     {"name": "Shawn Kang",
       "username": "skang",
@@ -14,7 +15,8 @@
       "gender": "Male",
       "age": "22",
       "mbti": "ESFP",
-      "image": ""
-    },
+      "image": "",
+      "search": "INTJ"
+    }
   ]
 }

@@ -86,8 +86,9 @@
                       box-sizing property */
 }
 
-.navigation li a{
-	text-decoration: none;
+.navigation li p{
+	text-align: center;
+	font-size: 12px;
 }
 
 .img-circle {

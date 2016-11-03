@@ -12,12 +12,16 @@
 
 <body>
 
-	<h1>{{Name}}</h1>
+	<h1 style="text-align: center">{{Name}}</h1>
 
-	<h2>{{Description}}</h2>
+	<h2 id="flow" style="text-align: center; margin: 0 10px;">{{Description}}</h2>
 		<a href="/mbti" class="btn btn-danger btn-lg btn-block">Back</a>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/flowtype.js"></script>
+	<script>
+		$("#flow").flowtype();
+	</script>
 </body>
 </html>
