@@ -8,7 +8,7 @@
 exports.view = function(req, res){
   var users = require("../users.json");
   console.log(users);
-  var matches = users.users;
+  var matches = JSON.parse(JSON.stringify(users)).users;
   //var curUser = getCookie("typsy_cur_user");
   var curUser = req.cookies.typsy_cur_user;
   console.log(curUser);
@@ -19,7 +19,7 @@ exports.view = function(req, res){
     removeNonProperties(matches, "mbti", user["search"]);
   }
   sortJsonArrayByProperty(matches, "age", -1);
-  console.log(users);
+  console.log(matches);
   res.render('matches', {"users": matches});
 };
 
@@ -37,11 +37,17 @@ function getUserByName(objArray, user){
 
 function removeNonProperties(objArray, prop, value){
   if (arguments.length<3) throw new Error("removeNonProperties requires 3 arguments");
-  for(var key in objArray){
-    //console.log(key + ", " + objArray[key] + ", " + objArray[key][prop]);
-    if(objArray[key][prop] !== value){
-      //console.log("deleted");
-      objArray.splice(key, 1);
+  var done = false;
+  while(!done){
+    done = true;
+    for(var key in objArray){
+      //console.log(key + ", " + objArray[key] + ", " + objArray[key][prop]);
+      if(objArray[key][prop] !== value){
+        //console.log("deleted");
+        objArray.splice(key, 1);
+        done = false;
+        break;
+      }
     }
   }
   //console.log(objArray);
