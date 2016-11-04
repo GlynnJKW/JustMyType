@@ -6,7 +6,7 @@
       "gender": "Male",
       "age": "20",
       "mbti": "INTJ",
-      "image": "",
+      "image": "/images/boy2.jpeg",
       "search": "ESFP"
     },
     {"name": "Shawn Kang",
@@ -15,7 +15,34 @@
       "gender": "Male",
       "age": "22",
       "mbti": "ESFP",
-      "image": "",
+      "image": "/images/boy3.jpg",
+      "search": "INTJ"
+    },
+    {"name": "Derrick Kerra",
+      "username": "dkerra",
+      "password": "deck",
+      "gender": "Male",
+      "age": "27",
+      "mbti": "ESFP",
+      "image": "/images/boy1.jpeg",
+      "search": "INTJ"
+    },
+    {"name": "Patrick O'Boyle",
+      "username": "boyleboy",
+      "password": "pato",
+      "gender": "Male",
+      "age": "32",
+      "mbti": "ESFP",
+      "image": "/images/boy4.jpeg",
+      "search": "INTJ"
+    },
+    {"name": "Sally Jo",
+      "username": "sajo",
+      "password": "sallyjo",
+      "gender": "Female",
+      "age": "21",
+      "mbti": "ESFP",
+      "image": "/images/girl6.jpeg",
       "search": "INTJ"
     }
   ]

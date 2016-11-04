@@ -14,17 +14,27 @@
 
 <body>
 
-	<h1>Matches</h1>
-		<a href="/profile" class="btn btn-danger btn-lg btn-block">Back</a>
+	<h1 style="text-align:center">Matches</h1>
 
-
-		<div id="matches">
+		<div id="matches" class="matches">
 			{{#each users}}
-				<div>
-					<h1>{{name}}</h1>
+				<div class="match">
+					<div class="matchName">
+						<h1>{{name}}</h1>
+					</div>
+					<div class="matchInfo">
+						<div class="matchPhoto">
+							<img src={{image}} width=100% height=100% style="border-radius:5%">
+						</div>
+						<div class="matchDesc">
+							<h3>{{age}} year old {{gender}}</h3>
+							<h2>{{mbti}}</h2>
+						</div>
+					</div>
 				</div>
 			{{/each}}
 		</div>
+
 
 
 

@@ -124,3 +124,41 @@
 .bottom-profile li{
 	font-size: 4em
 }
+
+.matches{
+	margin-top: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 10%;
+	display: inline-block;
+}
+
+.match{
+	width: 80%;
+	margin: 5% auto;
+	display: block;
+	background-color: aliceblue;
+	border-radius: 2%;
+	padding:2%;
+}
+
+.matchName{
+	text-align: center;
+}
+
+.matchName h1{
+	margin-bottom: 20px;
+}
+
+.matchInfo{
+	display: -webkit-box;
+}
+
+.matchPhoto{
+	width:50%;
+}
+
+.matchDesc{
+	width:50%;
+	text-align: right;
+}
