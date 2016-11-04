@@ -14,24 +14,23 @@
 
 <body>
 
-  <h1>Preferences</h1>
+  <h1 style = "text-align: center">Preferences</h1>
   <form action="#" method="post">
-      <p>Gender:
+      <label for="gender">Gender:</label>
       <br />
       <input id="female" type="radio" name="gender" value="f">
       <label for="female">Female</label>
       <input id="male" type="radio" name="gender" value="m">
       <label for="male">Male</label>
       <input id="both" type="radio" name="gender" value="b">
-      <label for="both">Both</label>
-      </p>
-      <p>Age:
+      <label for="both">Both</label><br />
+      <label for="age">Age:</label>
+      <input type="text" name="age" required="required" /><br />
       <br />
-      </p>
-      <p>Location:
+      <label for="location">Location:</label>
+      <input type="text" name="location" required="required" /><br />
       <br />
-      </p>
-      <p>Personality Type(s):
+      <label for="personalitytype">Personality Type:</label>
       <br />
       <select name="personality" size="8" multiple="multiple">
           <option value="ISTJ" selected="selected">ISTJ</option>
@@ -51,9 +50,11 @@
           <option value="ENFJ">ISFJ</option>
           <option value="ENTJ">ISFJ</option>
       </select>
-
-
-
+      <br />
+      <br />
+      <input type="submit" value="Done" />
+      <br />
+      <a href="/profile" class="btn btn-danger btn-lg btn-block">Back</a>
 
       </p>
 
