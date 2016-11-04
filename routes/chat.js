@@ -1,7 +1,4 @@
 
-/*
- * GET home page.
- */
 
 exports.view = function(req, res){
   var users = require("../users.json");

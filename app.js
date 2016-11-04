@@ -20,6 +20,7 @@ var chat = require('./routes/chat');
 var matches = require('./routes/matches');
 var preferences = require('./routes/preferences');
 var editprofile = require('./routes/editprofile');
+var personalitytest = require('./routes/personalitytest');
 /*The 16 personalities
 var istj = require('./routes/istj');
 var isfj = require('./routes/isfj');
@@ -74,6 +75,7 @@ app.get('/profile/preferences', preferences.view);
 app.get('/profile/edit', editprofile.view);
 app.get('/chat', chat.view);
 app.get('/matches', matches.view);
+app.get('/profile/personalitytest', personalitytest.view);
 // Example route
 // app.get('/users', user.list);
 
