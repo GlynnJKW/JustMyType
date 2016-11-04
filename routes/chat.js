@@ -1,8 +1,6 @@
 
-/*
- * GET home page.
- */
 
-exports.view = function(req, res){
-  res.render('chat');
+exports.view	=	function(req,	res)	{
+    var	name = req.params.name;
+    res.render('chat');
 };
