@@ -5,15 +5,26 @@ exports.view = function(req, res){
   var curUser = req.cookies.typsy_cur_user;
   var chatPerson = req.params.name;
 
-  var chatPeople = chats.curUser;
+  var chatPeople = chats["users"][curUser];
+
   var chatData = 0;
   for(var key in chatPeople){
-    if(chatPeople[key]["username"] === chatPerson){
+    console.log(chatPeople[key]["username"]);
+    if(chatPeople[key]["username"] == chatPerson){
       chatData = chatPeople[key]["data"];
     }
   }
-  
+
+  console.log(chatData);
+
+
+
   sortJsonArrayByProperty(chatData, "time");
+  for(var key in chatData){
+    var time = parseInt(chatData[key]["time"]);
+    var date = new Date(time).toLocaleString();
+    chatData[key]["date"] = date;
+  }
 
   res.render('chatpage', {"messages": chatData, "me": curUser, "them": chatPerson});
 };

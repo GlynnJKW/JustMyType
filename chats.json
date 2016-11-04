@@ -4,13 +4,13 @@
       {
         "username": "skang",
         "data": [
-          {"time": 1478222529469,
+          {"time": "1478131200021",
           "message": "Hi!",
           "from": "skang"},
-          {"time": 1478222529470,
+          {"time": "1478131200022",
           "message": "Hi to you too!",
           "from": "gjwillia"},
-          {"time": 1478222529471,
+          {"time": "1478131200023",
           "message": "Ok bye",
           "from": "skang"}
         ]
@@ -20,13 +20,13 @@
       {
         "username": "gjwillia",
         "data": [
-          {"time": 1478222529469,
+          {"time": "1478131200021",
           "message": "Hi!",
           "from": "skang"},
-          {"time": 1478222529470,
+          {"time": "1478131200022",
           "message": "Hi to you too!",
           "from": "gjwillia"},
-          {"time": 1478222529471,
+          {"time": "1478131200023",
           "message": "Ok bye",
           "from": "skang"}
         ]

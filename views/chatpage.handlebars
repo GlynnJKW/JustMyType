@@ -7,18 +7,17 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
-	<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
 
 
-<h1 style = "text-align: center">Chat</h1>
+<h1 style = "text-align: center">{{them}}</h1>
 
-{{#each people}}
-	<h1> {{username}}
-		<a class = "btn btn-success" role = "button" href="/chat/{{username}}">Chat!</a>
-	</h1>
+{{#each messages}}
+	<h3> {{date}} </h3>
+	<p><b>{{from}}:</b> {{message}}</p>
 
 	<hr>
 
@@ -49,27 +48,26 @@
 <hr>
 -->
 
-		<div id="navbar" class="navigation">
-			<ul>
-				<li id="matcheslink">
-					<span class="fa fa-heart-o" aria-hidden="true"></span>
-					<p>MATCHES</p>
-				</li>
-				<li id="mbtilink">
-					<span class="fa fa-bar-chart" aria-hidden="true"></span>
-					<p>MBTI</p>
-				</li>
-				<li id="chatlink">
-					<span class="fa fa-inbox" aria-hidden="true"></span>
-					<p>CHAT</p>
-				</li>
-				<li id="profilelink">
-					<span class="fa fa-user-circle" aria-hidden="true"></span>
-					<p>PROFILE</p>
-				</li>
-			</ul>
-		</div>
-	</div>
+<div id="navbar" class="navigation">
+	<ul>
+		<li id="matcheslink">
+			<span class="fa fa-heart-o" aria-hidden="true"></span>
+			<p>MATCHES</p>
+		</li>
+		<li id="mbtilink">
+			<span class="fa fa-bar-chart" aria-hidden="true"></span>
+			<p>MBTI</p>
+		</li>
+		<li id="chatlink">
+			<span class="fa fa-inbox" aria-hidden="true"></span>
+			<p>CHAT</p>
+		</li>
+		<li id="profilelink">
+			<span class="fa fa-user-circle" aria-hidden="true"></span>
+			<p>PROFILE</p>
+		</li>
+	</ul>
+</div>
 
 
 

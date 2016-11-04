@@ -7,18 +7,22 @@ function(){
 	$(this).css("background-color", "#cccccc");
 })
 
+$("#backlink").click(function(){
+	window.location = "./";
+})
+
 $("#profilelink").click(function(){
-	window.location = "profile";
+	window.location = "/profile";
 })
 
 $("#matcheslink").click(function(){
-	window.location = "matches";
+	window.location = "/matches";
 })
 
 $("#mbtilink").click(function(){
-	window.location = "mbti";
+	window.location = "/mbti";
 })
 
 $("#chatlink").click(function(){
-	window.location = "chat";
+	window.location = "/chat";
 })

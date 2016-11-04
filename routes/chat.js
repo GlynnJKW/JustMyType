@@ -5,9 +5,11 @@ exports.view = function(req, res){
   var chats = require("../chats.json");
 
   var curUser = req.cookies.typsy_cur_user;
-  var chatPerson = req.params.name;
+  console.log(curUser);
+  //var chatPerson = req.params.name;
 
-  var chatPeople = chats.curUser;
+  var chatPeople = chats["users"][curUser];
+  console.log(chatPeople);
 
-  res.render('chat', {"people": chatData});
+  res.render('chat', {"people": chatPeople});
 };
