@@ -1,0 +1,45 @@
+{
+  "users": {
+    "gjwillia": [
+      {
+        "username": "skang",
+        "data": [
+          {"time": 1478222529469,
+          "message": "Hi!",
+          "from": "skang"},
+          {"time": 1478222529470,
+          "message": "Hi to you too!",
+          "from": "gjwillia"},
+          {"time": 1478222529471,
+          "message": "Ok bye",
+          "from": "skang"}
+        ]
+      }
+    ],
+    "skang": [
+      {
+        "username": "gjwillia",
+        "data": [
+          {"time": 1478222529469,
+          "message": "Hi!",
+          "from": "skang"},
+          {"time": 1478222529470,
+          "message": "Hi to you too!",
+          "from": "gjwillia"},
+          {"time": 1478222529471,
+          "message": "Ok bye",
+          "from": "skang"}
+        ]
+      }
+    ],
+    "dkerra": [
+
+    ],
+    "sajo": [
+
+    ],
+    "boyleboy": [
+
+    ]
+  }
+}
