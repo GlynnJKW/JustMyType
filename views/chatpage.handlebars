@@ -14,14 +14,17 @@
 
 
 <h1 style = "text-align: center">{{them}}</h1>
+<div style="margin-bottom:20%">
+	<div id="messages">
+		{{#each messages}}
+			<h6> {{date}} </h6>
+			<h4><b>{{from}}:</b> {{message}}</h4>
 
-{{#each messages}}
-	<h3> {{date}} </h3>
-	<p><b>{{from}}:</b> {{message}}</p>
+			<hr>
 
-	<hr>
-
-{{/each}}
+		{{/each}}
+	</div>
+</div>
 <!--
 <h1>Shawn Kang
 	<a class = "btn btn-success" role = "button">Chat!</a>
@@ -49,6 +52,18 @@
 -->
 
 <div id="navbar" class="navigation">
+
+	<div style="width: 100%; height: 20%; display: -webkit-inline-box; margin-bottom: 3%">
+		<div style="width: 75%; height: 8vh">
+			<input style="width: 96%; height: 100%; margin: 0 2%" type="text" value="" id="messageData">
+			<input id="usernameInput" type="hidden" value={{me}}>
+			<input id="talkingTo" type="hidden" value={{them}}>
+		</div>
+		<div style="width: 21%; height: 8vh; line-height: 8vh; background-color:darkcyan; border-radius: 8%; margin:0 2%; text-align:center; padding: auto 0" onclick="sendMessage()" id="send">
+			<p id="sendText"><b>SEND</b></p>
+		</div>
+	</div>
+
 	<ul>
 		<li id="matcheslink">
 			<span class="fa fa-heart-o" aria-hidden="true"></span>
@@ -74,6 +89,19 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/navbar.js"></script>
+	<script src="/js/user.js"></script>
+	<script>
+     var time = new Date().getTime();
+
+     function refresh() {
+         if(new Date().getTime() - time >= 3000)
+             $("#messages").load(location.href+" #messages>*","");
+         else
+             setTimeout(refresh, 500);
+     }
+
+     setTimeout(refresh, 500);
+</script>
 
 </body>
 </html>

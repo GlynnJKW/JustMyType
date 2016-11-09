@@ -7,6 +7,8 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var bodyParser = require('body-parser');
+
 
 var index = require('./routes/index');
 var	project	=	require('./routes/project');
@@ -22,6 +24,7 @@ var preferences = require('./routes/preferences');
 var editprofile = require('./routes/editprofile');
 var personalitytest = require('./routes/personalitytest');
 var chatpage = require('./routes/chatpage');
+var sendmessage = require('./routes/sendmessage');
 /*The 16 personalities
 var istj = require('./routes/istj');
 var isfj = require('./routes/isfj');
@@ -58,6 +61,8 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // development only
 if ('development' == app.get('env')) {
@@ -78,6 +83,7 @@ app.get('/chat', chat.view);
 app.get('/matches', matches.view);
 app.get('/profile/personalitytest', personalitytest.view);
 app.get('/chat/:name', chatpage.view);
+app.post('/sendmessage', sendmessage.view);
 // Example route
 // app.get('/users', user.list);
 

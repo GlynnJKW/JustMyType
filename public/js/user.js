@@ -4,8 +4,38 @@ function login(){
   console.log("clicked");
   if($("#username").val() != ""){
     setCookie("typsy_cur_user", $("#username").val(), 1);
+    window.location = "profile";
   }
-  window.location = "profile";
+}
+
+function sendMessage(){
+  var curUser = getCookie("typsy_cur_user");
+  var recipient = $("#talkingTo").val();
+
+
+  var time = new Date().getTime();
+  var text = $("#messageData").val();
+  if(text !== ""){
+
+    var chatData = {
+      "time": time,
+      "message": text,
+      "from": curUser,
+      "to": recipient
+    };
+    $("#sendText").text("SENDING");
+    $("#send").css("background-color", "grey");
+    $("#send").attr("onclick","");
+    $.post("/sendMessage", chatData, sendMessageCallback);
+  }
+}
+
+function sendMessageCallback(result){
+  //$("#messageData").val("");
+  //$("#sendText").text("SEND");
+  //$("#send").css("background-color", "darkcyan");
+  //$("#send").attr("onclick","sendMessage()");
+  window.location.reload(true);
 }
 
 function chatClick(username){
