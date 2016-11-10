@@ -6,7 +6,7 @@
       "gender": "Male",
       "age": "20",
       "mbti": "INTJ",
-      "image": "/images/boy2.jpeg",
+      "image": "/images/boy2.jpg",
       "search": "ESFP"
     },
     {"name": "Shawn Kang",
@@ -24,7 +24,7 @@
       "gender": "Male",
       "age": "27",
       "mbti": "ESFP",
-      "image": "/images/boy1.jpeg",
+      "image": "/images/boy1.jpg",
       "search": "INTJ"
     },
     {"name": "Patrick O'Boyle",
@@ -33,7 +33,7 @@
       "gender": "Male",
       "age": "32",
       "mbti": "ESFP",
-      "image": "/images/boy4.jpeg",
+      "image": "/images/boy4.jpg",
       "search": "INTJ"
     },
     {"name": "Sally Jo",
@@ -42,7 +42,7 @@
       "gender": "Female",
       "age": "21",
       "mbti": "ESFP",
-      "image": "/images/girl6.jpeg",
+      "image": "/images/girl6.jpg",
       "search": "INTJ"
     }
   ]
