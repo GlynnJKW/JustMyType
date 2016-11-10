@@ -15,6 +15,15 @@
 
 <h1 style = "text-align: center">Chat</h1>
 
+{{#each people}}
+	<h1> {{username}}
+		<a class = "btn btn-success" role = "button" href="/chat/{{username}}">Chat!</a>
+	</h1>
+
+	<hr>
+
+{{/each}}
+<!--
 <h1>Shawn Kang
 	<a class = "btn btn-success" role = "button">Chat!</a>
 </h1>
@@ -38,6 +47,7 @@
 </h1>
 
 <hr>
+-->
 
 		<div id="navbar" class="navigation">
 			<ul>

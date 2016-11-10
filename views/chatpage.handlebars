@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chat</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+	<link href="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<h1 style = "text-align: center">{{them}}</h1>
+<div style="margin-bottom:20%">
+	<div id="messages">
+		{{#each messages}}
+			<h6> {{date}} </h6>
+			<h4><b>{{from}}:</b> {{message}}</h4>
+
+			<hr>
+
+		{{/each}}
+	</div>
+</div>
+<!--
+<h1>Shawn Kang
+	<a class = "btn btn-success" role = "button">Chat!</a>
+</h1>
+
+<hr>
+
+<h1> Glynn Williams
+	<a class = "btn btn-success" role = "button">Chat!</a>
+</h1>
+
+<hr>
+
+<h1> Sally Jo
+	<a class = "btn btn-success" role = "button">Chat!</a>
+</h1>
+
+<hr>
+
+<h1> Kenny Tran
+	<a class = "btn btn-success" role = "button">Chat!</a>
+</h1>
+
+<hr>
+-->
+
+<div id="navbar" class="navigation">
+
+	<div style="width: 100%; height: 20%; display: -webkit-inline-box; margin-bottom: 3%">
+		<div style="width: 75%; height: 8vh">
+			<input style="width: 96%; height: 100%; margin: 0 2%" type="text" value="" id="messageData">
+			<input id="usernameInput" type="hidden" value={{me}}>
+			<input id="talkingTo" type="hidden" value={{them}}>
+		</div>
+		<div style="width: 21%; height: 8vh; line-height: 8vh; background-color:darkcyan; border-radius: 8%; margin:0 2%; text-align:center; padding: auto 0" onclick="sendMessage()" id="send">
+			<p id="sendText"><b>SEND</b></p>
+		</div>
+	</div>
+
+	<ul>
+		<li id="matcheslink">
+			<span class="fa fa-heart-o" aria-hidden="true"></span>
+			<p>MATCHES</p>
+		</li>
+		<li id="mbtilink">
+			<span class="fa fa-bar-chart" aria-hidden="true"></span>
+			<p>MBTI</p>
+		</li>
+		<li id="chatlink">
+			<span class="fa fa-inbox" aria-hidden="true"></span>
+			<p>CHAT</p>
+		</li>
+		<li id="profilelink">
+			<span class="fa fa-user-circle" aria-hidden="true"></span>
+			<p>PROFILE</p>
+		</li>
+	</ul>
+</div>
+
+
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/navbar.js"></script>
+	<script src="/js/user.js"></script>
+	<script>
+     var time = new Date().getTime();
+
+     function refresh() {
+         if(new Date().getTime() - time >= 3000)
+             $("#messages").load(location.href+" #messages>*","");
+         else
+             setTimeout(refresh, 500);
+     }
+
+     setTimeout(refresh, 500);
+</script>
+
+</body>
+</html>
