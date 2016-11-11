@@ -1,4 +1,3 @@
-exports.view	=	function(req,	res)	{
-		//	controller	code	goes	here
+exports.view=function(req,res){
     res.render('editprofile');
 };

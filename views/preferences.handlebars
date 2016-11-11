@@ -14,46 +14,40 @@
 
 <body>
 
-  <h1 style = "text-align: center">Preferences</h1>
-  <form action="#" method="post">
-      <label for="gender">Gender:</label>
-      <br />
-      <input id="female" type="radio" name="gender" value="f">
-      <label for="female">Female</label>
-      <input id="male" type="radio" name="gender" value="m">
-      <label for="male">Male</label>
-      <input id="both" type="radio" name="gender" value="b">
-      <label for="both">Both</label><br />
-      <label for="age">Age:</label>
-      <input type="text" name="age" required="required" /><br />
-      <br />
-      <label for="location">Location:</label>
-      <input type="text" name="location" required="required" /><br />
-      <br />
-      <label for="personalitytype">Personality Type:</label>
-      <br />
-      <select name="personality" size="8" multiple="multiple">
-          <option value="ISTJ" selected="selected">ISTJ</option>
-          <option value="ISFJ">ISFJ</option>
-          <option value="INFJ">INFJ</option>
-          <option value="INTJ">INTJ</option>
-          <option value="ISTP">ISTP</option>
-          <option value="ISFP">ISFP</option>
-          <option value="INFP">INFP</option>
-          <option value="INTP">INTP</option>
-          <option value="ESTP">ESTP</option>
-          <option value="ESFP">ESFP</option>
-          <option value="ENFP">ENFP</option>
-          <option value="ENTP">ENTP</option>
-          <option value="ESTJ">ESTJ</option>
-          <option value="ESFJ">ESFJ</option>
-          <option value="ENFJ">ENFJ</option>
-          <option value="ENTJ">ENTJ</option>
-      </select>
-      <br />
-      <br />
-      <input type="submit" value="Done" />
-      <br />
+<h1 style = "text-align: center">Preferences</h1>
+    <br>
+
+ <form action ="preferences.json" id="preferencesForm" method="POST">
+  Gender:<br>
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="female">Female<br>
+  Age Range:<br>
+  <input type="text" name="agerange"><br>
+  Location:<br>
+  <input type="radio" name="location" value="sandiego">San Diego<br>
+  <input type="radio" name="location" value="lajolla">La Jolla<br>
+  MBTI:<br>
+  <select name="mbti">
+  <option value="istj">ISTJ</option>
+  <option value="isfj">ISFJ</option>
+  <option value="infj">INFJ</option>
+  <option value="intj">INTJ</option>
+  <option value="istp">ISTP</option>
+  <option value="isfp">ISFP</option>
+  <option value="infp">INFP</option>
+  <option value="intp">INTP</option>
+  <option value="estp">ESTP</option>
+  <option value="esfp">ESFP</option>
+  <option value="enfp">ENFP</option>
+  <option value="entp">ENTP</option>
+  <option value="estj">ESTJ</option>
+  <option value="esfj">ESFJ</option>
+  <option value="enfj">ENFJ</option>
+  <option value="entj">ENTJ</option>
+  </select>
+  <br>
+  <button type="submit">Submit</button>
+</form>
       <a href="/profile" class="btn btn-danger btn-lg btn-block">Back</a>
 
       </p>

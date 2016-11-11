@@ -63,4 +63,47 @@ function getCookie(cname) {
         }
     }
     return "";
+
+//Taking the form submission and storing it in the JSON file
+$('#profileForm').submit(function(event){
+  var profileData = {
+    'firstname': $('input[name=firstname]').val(),
+    'lastname': $('input[name=lastname]').val(),
+    'age': $('input[name=age]').val(),
+    'location': $('input[name=location]').val(),
+    'mbti': $('input[name=mbti]').val(),
+  };
+  $.ajax({
+    type: 'POST',
+    url: 'users.json',
+    data: profileData,
+    dataType: 'json',
+    encode: true 
+  })
+  .done(function(data){
+    console.log(data);
+  });
+  event.preventDefault();
+});
+
+$('#preferencesForm').submit(function(event){
+  var preferencesData = {
+    'gender': $('input[name=gender]').val(),
+    'agerange': $('input[name=agerange]').val(),
+    'location': $('input[name=location]').val(),
+    'mbti': $('input[name=mbti]').val(),
+  };
+  $.ajax({
+    type: 'POST',
+    url: 'preferences.json',
+    data: preferencesData,
+    dataType: 'json',
+    encode: true 
+  })
+  .done(function(data){
+    console.log(data);
+  });
+  event.preventDefault();
+});
+
 }
