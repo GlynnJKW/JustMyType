@@ -88,6 +88,7 @@ app.post('/changeProfile', editprofile.changeProfile);
 app.post('/changePreferences', editprofile.changePreferences);
 app.post('/register', login.register);
 
+
 // Example route
 // app.get('/users', user.list);
 

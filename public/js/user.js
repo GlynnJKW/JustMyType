@@ -87,7 +87,6 @@ function getCookie(cname) {
     return "";
   }
 
-
 $(document).ready(function () {
   console.log("dude.");
   //Taking the form submission and storing it in the JSON file
@@ -106,18 +105,6 @@ $(document).ready(function () {
     $.post("/changeProfile", profileData, function(result){
       window.location = "/profile";
     });
-    /*
-    $.ajax({
-      type: 'POST',
-      url: '/changePppppprofile',
-      data: profileData,
-      dataType: 'json',
-      encode: true
-    })
-    .done(function(data){
-      console.log(data);
-    });
-    */
   });
 
   $('#preferencesForm').submit(function(event){
@@ -133,19 +120,6 @@ $(document).ready(function () {
     $.post("/changePreferences", preferencesData, function(result){
       window.location = "/profile";
     });
-
-    /*
-    $.ajax({
-      type: 'POST',
-      url: 'preferences.json',
-      data: preferencesData,
-      dataType: 'json',
-      encode: true
-    })
-    .done(function(data){
-      console.log(data);
-    });
-    */
     event.preventDefault();
   });
 
