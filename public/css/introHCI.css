@@ -164,9 +164,9 @@
 }
 
 #messages{
-	margin: 2%;
+	margin: 0 2% 40%;
 	overflow-y: scroll;
-	height: 70%;
+	max-height: 60vh;
 }
 
 .message{

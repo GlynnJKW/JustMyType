@@ -1,6 +1,9 @@
 exports.view = function(req, res){
-  var users = require("../users.json");
-  var chats = require("../chats.json");
+  var fs = require('fs');
+  //var users = require("../users.json");
+  //var chats = require("../chats.json");
+  var users = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
+  var chats = JSON.parse(fs.readFileSync('./chats.json', 'utf8'));
 
   var curUser = req.cookies.typsy_cur_user;
   var chatPerson = req.params.name;
@@ -9,13 +12,13 @@ exports.view = function(req, res){
 
   var chatData = 0;
   for(var key in chatPeople){
-    console.log(chatPeople[key]["username"]);
+    //console.log(chatPeople[key]["username"]);
     if(chatPeople[key]["username"] == chatPerson){
       chatData = chatPeople[key]["data"];
     }
   }
 
-  console.log(chatData);
+  //console.log(chatData);
 
 
 

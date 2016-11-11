@@ -1,11 +1,29 @@
 'use strict';
 
 function login(){
-  console.log("clicked");
+  console.log("login request sent");
   if($("#username").val() != ""){
-    setCookie("typsy_cur_user", $("#username").val(), 1);
-    window.location = "profile";
+    $.post("/login", {"username": $("#username").val(), "password": $("#password").val()}, function(result){
+      console.log(result);
+      //console.log(result.wrong);
+      if(result["wrong"] === 0){
+        setCookie("typsy_cur_user", $("#username").val(), 1);
+        window.location = "/profile";
+      }
+      else if(result["wrong"] === 2){
+        alert("Password is incorrect");
+      }
+      else if(result["wrong"] === 1){
+        alert("Account with username does not exist");
+      }
+    });
   }
+}
+
+function logout(){
+  console.log("logged out");
+  setCookie("typsy_cur_user", " ", -1);
+  window.location = "/";
 }
 
 function sendMessage(){

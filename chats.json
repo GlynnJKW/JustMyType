@@ -4,15 +4,66 @@
       {
         "username": "skang",
         "data": [
-          {"time": "1478131200021",
-          "message": "Hi!",
-          "from": "skang"},
-          {"time": "1478131200022",
-          "message": "Hi to you too!",
-          "from": "gjwillia"},
-          {"time": "1478131200023",
-          "message": "Ok bye",
-          "from": "skang"}
+          {
+            "time": "1478131200021",
+            "message": "Hi!",
+            "from": "skang"
+          },
+          {
+            "time": "1478131200022",
+            "message": "Hi to you too!",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478131200023",
+            "message": "Ok bye",
+            "from": "skang"
+          },
+          {
+            "time": "1478822737804",
+            "message": "hm",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822739998",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822741092",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822742243",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822743193",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822744267",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822953083",
+            "message": "cool",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822960324",
+            "message": "this is working much better now",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478826289412",
+            "message": "nice nice nice",
+            "from": "skang"
+          }
         ]
       }
     ],
@@ -20,26 +71,71 @@
       {
         "username": "gjwillia",
         "data": [
-          {"time": "1478131200021",
-          "message": "Hi!",
-          "from": "skang"},
-          {"time": "1478131200022",
-          "message": "Hi to you too!",
-          "from": "gjwillia"},
-          {"time": "1478131200023",
-          "message": "Ok bye",
-          "from": "skang"}
+          {
+            "time": "1478131200021",
+            "message": "Hi!",
+            "from": "skang"
+          },
+          {
+            "time": "1478131200022",
+            "message": "Hi to you too!",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478131200023",
+            "message": "Ok bye",
+            "from": "skang"
+          },
+          {
+            "time": "1478822737804",
+            "message": "hm",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822739998",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822741092",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822742243",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822743193",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822744267",
+            "message": "ok",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822953083",
+            "message": "cool",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478822960324",
+            "message": "this is working much better now",
+            "from": "gjwillia"
+          },
+          {
+            "time": "1478826289412",
+            "message": "nice nice nice",
+            "from": "skang"
+          }
         ]
       }
     ],
-    "dkerra": [
-
-    ],
-    "sajo": [
-
-    ],
-    "boyleboy": [
-
-    ]
+    "dkerra": [],
+    "sajo": [],
+    "boyleboy": []
   }
 }
