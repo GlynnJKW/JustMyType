@@ -82,7 +82,7 @@ function getCookie(cname) {
     }
     return "";
 
-//Taking the form submission and storing it in the JSON file
+//Taking the form submission and storing it in the JSON file (editprofile)
 $('#profileForm').submit(function(event){
   var profileData = {
     'firstname': $('input[name=firstname]').val(),
@@ -104,6 +104,7 @@ $('#profileForm').submit(function(event){
   event.preventDefault();
 });
 
+//Form submission for Preferences
 $('#preferencesForm').submit(function(event){
   var preferencesData = {
     'gender': $('input[name=gender]').val(),
