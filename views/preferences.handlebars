@@ -17,15 +17,17 @@
 <h1 style = "text-align: center">Preferences</h1>
     <br>
 
- <form action ="preferences.json" id="preferencesForm" method="POST">
+ <form id="preferencesForm">
   Gender:<br>
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="female">Female<br>
-  Age Range:<br>
-  <input type="text" name="agerange"><br>
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Female">Female<br>
+  Minimum Age:<br>
+  <input type="text" name="minage"><br>
+	Maximum Age:<br>
+  <input type="text" name="maxage"><br>
   Location:<br>
-  <input type="radio" name="location" value="sandiego">San Diego<br>
-  <input type="radio" name="location" value="lajolla">La Jolla<br>
+  <input type="radio" name="location" value="San Diego">San Diego<br>
+  <input type="radio" name="location" value="La Jolla">La Jolla<br>
   MBTI:<br>
   <select name="mbti">
   <option value="istj">ISTJ</option>
@@ -50,13 +52,13 @@
 </form>
       <a href="/profile" class="btn btn-danger btn-lg btn-block">Back</a>
 
-      </p>
 
 
 
 		<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/navbar.js"></script>
+	<script src="/js/user.js"></script>
 
 </body>
 </html>

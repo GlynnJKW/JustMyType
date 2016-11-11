@@ -15,16 +15,19 @@
 <body>
   <h1 style = "text-align: center">Edit Profile</h1>
     <br>
-<form action ="users.json" id="profileForm" method="POST">
+<form id="profileForm">
   First name:<br>
   <input type="text" name="firstname"><br>
   Last name:<br>
   <input type="text" name="lastname"><br>
+	Gender:<br>
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Female">Female<br>
   Age:<br>
   <input type="text" name="age"><br>
   Location:<br>
-  <input type="radio" name="location" value="sandiego">San Diego<br>
-  <input type="radio" name="location" value="lajolla">La Jolla<br>
+  <input type="radio" name="location" value="San Diego">San Diego<br>
+  <input type="radio" name="location" value="La Jolla">La Jolla<br>
   MBTI:<br>
   <select name="mbti">
   <option value="istj">ISTJ</option>
@@ -54,6 +57,7 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/navbar.js"></script>
+	<script src="/js/user.js"></script>
 
 </body>
 </html>

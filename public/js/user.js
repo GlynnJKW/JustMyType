@@ -26,6 +26,10 @@ function logout(){
   window.location = "/";
 }
 
+function register(){
+
+}
+
 function sendMessage(){
   var curUser = getCookie("typsy_cur_user");
   var recipient = $("#talkingTo").val();
@@ -81,47 +85,99 @@ function getCookie(cname) {
         }
     }
     return "";
+  }
 
-//Taking the form submission and storing it in the JSON file
-$('#profileForm').submit(function(event){
-  var profileData = {
-    'firstname': $('input[name=firstname]').val(),
-    'lastname': $('input[name=lastname]').val(),
-    'age': $('input[name=age]').val(),
-    'location': $('input[name=location]').val(),
-    'mbti': $('input[name=mbti]').val(),
-  };
-  $.ajax({
-    type: 'POST',
-    url: 'users.json',
-    data: profileData,
-    dataType: 'json',
-    encode: true 
-  })
-  .done(function(data){
-    console.log(data);
+
+$(document).ready(function () {
+  console.log("dude.");
+  //Taking the form submission and storing it in the JSON file
+  $("#profileForm").submit(function(event){
+    console.log("profileform triggered");
+    event.preventDefault();
+    var profileData = {
+      'firstname': $('input[name=firstname]').val(),
+      'lastname': $('input[name=lastname]').val(),
+      'age': $('input[name=age]').val(),
+      'location': $('input[name=location]').val(),
+      'gender': $('input[name=gender]').val(),
+      'mbti': $('select[name=mbti] option:selected').text(),
+    };
+    console.log(profileData);
+    $.post("/changeProfile", profileData, function(result){
+      window.location = "/profile";
+    });
+    /*
+    $.ajax({
+      type: 'POST',
+      url: '/changePppppprofile',
+      data: profileData,
+      dataType: 'json',
+      encode: true
+    })
+    .done(function(data){
+      console.log(data);
+    });
+    */
   });
-  event.preventDefault();
-});
 
-$('#preferencesForm').submit(function(event){
-  var preferencesData = {
-    'gender': $('input[name=gender]').val(),
-    'agerange': $('input[name=agerange]').val(),
-    'location': $('input[name=location]').val(),
-    'mbti': $('input[name=mbti]').val(),
-  };
-  $.ajax({
-    type: 'POST',
-    url: 'preferences.json',
-    data: preferencesData,
-    dataType: 'json',
-    encode: true 
-  })
-  .done(function(data){
-    console.log(data);
+  $('#preferencesForm').submit(function(event){
+    var preferencesData = {
+      'gender': $('input[name=gender]').val(),
+      'minage': $('input[name=minage]').val(),
+      'maxage': $('input[name=maxage]').val(),
+      'location': $('input[name=location]').val(),
+      'mbti': $('select[name=mbti] option:selected').text(),
+    };
+    console.log(preferencesData);
+
+    $.post("/changePreferences", preferencesData, function(result){
+      window.location = "/profile";
+    });
+
+    /*
+    $.ajax({
+      type: 'POST',
+      url: 'preferences.json',
+      data: preferencesData,
+      dataType: 'json',
+      encode: true
+    })
+    .done(function(data){
+      console.log(data);
+    });
+    */
+    event.preventDefault();
   });
-  event.preventDefault();
-});
 
-}
+  $('#registerButton').click(function(){
+    $('#registerDiv').slideToggle();
+  });
+
+  $('#registerForm').submit(function(event){
+    event.preventDefault();
+    var registerData = {
+      'firstname': $('input[name=firstname]').val(),
+      'lastname': $('input[name=lastname]').val(),
+      'age': $('input[name=age]').val(),
+      'location': $('input[name=location]').val(),
+      'gender': $('input[name=gender]').val(),
+      'mbti': $('select[name=mbti] option:selected').text(),
+      "username": $("#username").val(),
+      "password": $("#password").val()
+    };
+
+    if(username !== "" && password !== ""){
+      $.post("/register", registerData, function(result){
+        console.log(result);
+        //console.log(result.wrong);
+        if(result["wrong"] === 0){
+          setCookie("typsy_cur_user", $("#username").val(), 1);
+          window.location = "/profile";
+        }
+        else if(result["wrong"] === 1){
+          alert("Account with username already exists");
+        }
+      });
+    }
+  });
+});

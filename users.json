@@ -1,49 +1,123 @@
 {
   "users": [
-    {"name": "Glynn Williams",
+    {
+      "name": "Glynn Williams",
       "username": "gjwillia",
       "password": "red",
       "gender": "Male",
       "age": "20",
       "mbti": "INTJ",
       "image": "/images/boy2.jpg",
-      "search": "ESFP"
+      "location": "San Diego",
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "23",
+        "mbti": "INTJ",
+        "location": "San Diego"
+      }
     },
-    {"name": "Shawn Kang",
+    {
+      "name": "Shawn Kang",
       "username": "skang",
       "password": "kingkang",
       "gender": "Male",
       "age": "22",
       "mbti": "ESFP",
+      "location": "San Diego",
       "image": "/images/boy3.jpg",
-      "search": "INTJ"
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "26",
+        "mbti": "ESFP",
+        "location": "San Diego"
+      }
     },
-    {"name": "Derrick Kerra",
+    {
+      "name": "Derrick Kerra",
       "username": "dkerra",
       "password": "deck",
       "gender": "Male",
       "age": "27",
       "mbti": "ESFP",
+      "location": "San Diego",
       "image": "/images/boy1.jpg",
-      "search": "INTJ"
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "23",
+        "mbti": "INTJ",
+        "location": "San Diego"
+      }
     },
-    {"name": "Patrick O'Boyle",
+    {
+      "name": "Patrick O'Boyle",
       "username": "boyleboy",
       "password": "pato",
       "gender": "Male",
       "age": "32",
       "mbti": "ESFP",
+      "location": "San Diego",
       "image": "/images/boy4.jpg",
-      "search": "INTJ"
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "23",
+        "mbti": "INTJ",
+        "location": "San Diego"
+      }
     },
-    {"name": "Sally Jo",
+    {
+      "name": "Sally Jo",
       "username": "sajo",
       "password": "sallyjo",
       "gender": "Female",
       "age": "21",
       "mbti": "ESFP",
+      "location": "San Diego",
       "image": "/images/girl6.jpg",
-      "search": "INTJ"
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "23",
+        "mbti": "INTJ",
+        "location": "San Diego"
+      }
+    },
+    {
+      "name": " ",
+      "username": "kenmasters",
+      "password": "shoryuken",
+      "gender": "Male",
+      "age": "",
+      "mbti": "ISTJ",
+      "location": "San Diego",
+      "image": "/images/boy1.jpg",
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "26",
+        "mbti": "ESFP",
+        "location": "San Diego"
+      }
+    },
+    {
+      "name": "Ken Masters",
+      "username": "kenmasters",
+      "password": "shoryuken",
+      "gender": "Male",
+      "age": "21",
+      "mbti": "ENFJ",
+      "location": "San Diego",
+      "image": "/images/boy1.jpg",
+      "preferences": {
+        "gender": "Male",
+        "minage": "19",
+        "maxage": "26",
+        "mbti": "ESFP",
+        "location": "San Diego"
+      }
     }
   ]
 }

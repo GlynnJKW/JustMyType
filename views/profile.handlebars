@@ -19,11 +19,11 @@
 		<div class="center-profile">
 
 			<div>
-				<h1 style="text-align:center">Profile</h1>
+				<h1 style="text-align:center">{{name}}</h1>
 			</div>
 
 			<div id="top">
-				<img src="http://www.clker.com/cliparts/B/R/Y/m/P/e/blank-profile-hi.png" alt="Profile Picture" width="96%" height="50%"class="img-circle" style="float:left; max-width:400px">
+				<img src="{{profileImage}}" alt="Profile Picture" width="96%" height="50%"class="img-circle" style="float:left; max-width:400px">
 				<div id="viewedit" class="view-edit-profile">
 					<ul>
 						<li>
@@ -36,7 +36,7 @@
 							<a href="profile/personalitytest">Personality Test</a>
 						</li>
 						<li>
-							<a href="/">Log Out</a>
+							<a onclick="logout()">Log Out</a>
 						</li>
 					</ul>
 				</div>
@@ -92,5 +92,6 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/navbar.js"></script>
+	<script src="/js/user.js"></script>
 </body>
 </html>

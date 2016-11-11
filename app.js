@@ -84,6 +84,9 @@ app.get('/matches', matches.view);
 app.get('/profile/personalitytest', personalitytest.view);
 app.get('/chat/:name', chatpage.view);
 app.post('/sendmessage', sendmessage.view);
+app.post('/changeProfile', editprofile.changeProfile);
+app.post('/changePreferences', editprofile.changePreferences);
+app.post('/register', login.register);
 
 // Example route
 // app.get('/users', user.list);

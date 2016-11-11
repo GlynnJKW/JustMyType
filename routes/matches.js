@@ -14,15 +14,20 @@ exports.view = function(req, res){
   var matches = JSON.parse(JSON.stringify(users)).users;
   //var curUser = getCookie("typsy_cur_user");
   var curUser = req.cookies.typsy_cur_user;
-  //console.log(curUser);
+  console.log(curUser);
   var user = getUserByName(matches, curUser);
   removeProperties(matches, "username", curUser);
-  //console.log(user);
+  console.log(user);
   if(user !== 0){
-    removeNonProperties(matches, "mbti", user["search"]);
+    console.log(user["preferences"]["mbti"]);
+    removeNonProperties(matches, "mbti", user["preferences"]["mbti"]);
+    removeNonProperties(matches, "location", user["preferences"]["location"]);
+    removeNonProperties(matches, "gender", user["preferences"]["gender"]);
+    removeCompareProperties(matches, "age", user["preferences"]["minage"], -1);
+    removeCompareProperties(matches, "age", user["preferences"]["maxage"], 1);
   }
-  sortJsonArrayByProperty(matches, "age", -1);
-  //console.log(matches);
+  sortJsonArrayByProperty(matches, "name", 1);
+  console.log(matches);
   res.render('matches', {"users": matches});
 };
 
@@ -46,10 +51,41 @@ function removeNonProperties(objArray, prop, value){
     for(var key in objArray){
       //console.log(key + ", " + objArray[key] + ", " + objArray[key][prop]);
       if(objArray[key][prop] !== value){
-        //console.log("deleted");
+        console.log("deleted" + objArray[key]);
         objArray.splice(key, 1);
         done = false;
         break;
+      }
+    }
+  }
+  //console.log(objArray);
+}
+
+function removeCompareProperties(objArray, prop, value, direction){
+  if (arguments.length<3) throw new Error("removeNonProperties requires 3 arguments");
+  var direct = arguments.length>2 ? arguments[2] : 1; //Default to ascending
+  var done = false;
+  while(!done){
+    done = true;
+    for(var key in objArray){
+      //console.log(key + ", " + objArray[key] + ", " + objArray[key][prop]);
+      if(direct == 1){
+        if(objArray[key][prop] < value){
+          //console.log("deleted");
+          console.log("deleted" + objArray[key]);
+          objArray.splice(key, 1);
+          done = false;
+          break;
+        }
+      }
+      else if(direct == -1){
+        if(objArray[key][prop] > value){
+          //console.log("deleted");
+          console.log("deleted" + objArray[key]);
+          objArray.splice(key, 1);
+          done = false;
+          break;
+        }
       }
     }
   }
