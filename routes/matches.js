@@ -6,20 +6,23 @@
 
 
 exports.view = function(req, res){
-  var users = require("../users.json");
-  console.log(users);
+  var fs = require('fs');
+  //var users = require("../users.json");
+  var users = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
+
+  //console.log(users);
   var matches = JSON.parse(JSON.stringify(users)).users;
   //var curUser = getCookie("typsy_cur_user");
   var curUser = req.cookies.typsy_cur_user;
-  console.log(curUser);
+  //console.log(curUser);
   var user = getUserByName(matches, curUser);
   removeProperties(matches, "username", curUser);
-  console.log(user);
+  //console.log(user);
   if(user !== 0){
     removeNonProperties(matches, "mbti", user["search"]);
   }
   sortJsonArrayByProperty(matches, "age", -1);
-  console.log(matches);
+  //console.log(matches);
   res.render('matches', {"users": matches});
 };
 
@@ -27,11 +30,11 @@ function getUserByName(objArray, user){
   if (arguments.length<2) throw new Error("getUserByName requires 2 arguments");
   for(var key in objArray){
     if(objArray[key]["username"] === user){
-      console.log(key)
+      //console.log(key)
       return objArray[key];
     }
   }
-  console.log("not found");
+  //console.log("not found");
   return 0;
 }
 

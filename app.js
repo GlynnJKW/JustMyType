@@ -72,7 +72,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 //app.get('/project/:name', project.viewProject)
-app.get('/login', login.view);
+app.post('/login', login.login);
 app.get('/profile', profile.view);
 app.get('/mbti', mbti.view);
 app.get('/mbti/:name', mbtiname.view);

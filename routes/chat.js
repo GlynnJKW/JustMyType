@@ -1,8 +1,11 @@
 
 
 exports.view = function(req, res){
-  var users = require("../users.json");
-  var chats = require("../chats.json");
+  var fs = require('fs');
+  //var users = require("../users.json");
+  //var chats = require("../chats.json");
+  var users = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
+  var chats = JSON.parse(fs.readFileSync('./chats.json', 'utf8'));
 
   var curUser = req.cookies.typsy_cur_user;
   console.log(curUser);
