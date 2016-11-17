@@ -171,3 +171,7 @@
 .message{
 	padding: 1%;
 }
+
+.container .row{
+	margin-bottom: 10px;
+}
