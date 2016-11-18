@@ -101,7 +101,7 @@ $("#preflink").click(function(){
 })
 
 $("#editlink").click(function(){
-	window.location = "/profile/editprofile";
+	window.location = "/profile/edit";
 })
 
 $("#matcheslink").click(function(){
