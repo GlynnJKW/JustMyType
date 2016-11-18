@@ -7,6 +7,17 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+
+var hbs = handlebars.create({
+  helpers: {
+    isNth: function(index_count, mod, block){
+      if(parseInt(index_count)%(mod)=== 0){
+    		return block.fn(this);
+      }
+    }
+  }
+});
+
 var bodyParser = require('body-parser');
 
 
@@ -50,7 +61,7 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));

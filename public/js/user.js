@@ -20,6 +20,10 @@ function login(){
   }
 }
 
+function goTo(location){
+  window.location = location;
+}
+
 function logout(){
   console.log("logged out");
   setCookie("typsy_cur_user", " ", -1);
