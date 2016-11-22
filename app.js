@@ -92,6 +92,7 @@ app.get('/profile/preferences', preferences.view);
 app.get('/profile/edit', editprofile.view);
 app.get('/chat', chat.view);
 app.get('/matches', matches.view);
+app.get('/matches2', matches.view2);
 app.get('/profile/personalitytest', personalitytest.view);
 app.get('/chat/:name', chatpage.view);
 app.post('/sendmessage', sendmessage.view);
