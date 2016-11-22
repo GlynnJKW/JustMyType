@@ -28,7 +28,7 @@ exports.view = function(req, res){
   }
   sortJsonArrayByProperty(matches, "name", 1);
   console.log(matches);
-  res.render('matches', {"users": matches});
+  res.render('matches', {"users": matches, "prefs": user["preferences"]});
 };
 
 function getUserByName(objArray, user){
