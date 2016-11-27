@@ -66,7 +66,7 @@ function sendMessageCallback(result){
 
 function chatClick(username){
   ga('send', 'event', 'Matches', "Chatclick");
-  window.location = "/chat/" + username;
+  //window.location = "/chat/" + username;
 }
 
 function setCookie(cname, cvalue, exdays) {
