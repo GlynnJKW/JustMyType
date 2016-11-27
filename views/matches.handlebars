@@ -55,6 +55,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 								<button class="btn btn-primary btn-lg btn-block" onclick="chat('{{username}}')">
                                 <script>
                                     function chat(username){
+																				ga('send', 'event', 'Matches', "Chatclick");
                                         window.location="/chat/" + username;
                                     }
                                 </script>
