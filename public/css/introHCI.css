@@ -91,6 +91,16 @@
 	font-size: 12px;
 }
 
+li#editlink{
+	border-color: red;
+}
+li#preflink{
+	border-color:red;
+}
+li#logoutlink{
+	border-color:red;
+}
+
 .img-circle {
     border-radius: 50%;
 }
@@ -174,4 +184,9 @@
 
 .container .row{
 	margin-bottom: 10px;
+}
+
+#wrapper{
+	width:1000px;
+	margin: 0 auto;
 }
