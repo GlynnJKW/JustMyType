@@ -28,7 +28,33 @@ exports.view = function(req, res){
   }
   sortJsonArrayByProperty(matches, "name", 1);
   console.log(matches);
-  res.render('matches', {"users": matches});
+  res.render('matches', {"buttonText": "CHAT", "users": matches, "prefs": user["preferences"]});
+};
+             
+exports.view2 = function(req, res){
+  var fs = require('fs');
+  //var users = require("../users.json");
+  var users = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
+
+  //console.log(users);
+  var matches = JSON.parse(JSON.stringify(users)).users;
+  //var curUser = getCookie("typsy_cur_user");
+  var curUser = req.cookies.typsy_cur_user;
+  console.log(curUser);
+  var user = getUserByName(matches, curUser);
+  removeProperties(matches, "username", curUser);
+  console.log(user);
+  if(user !== 0){
+    console.log(user["preferences"]["mbti"]);
+    removeNonProperties(matches, "mbti", user["preferences"]["mbti"]);
+    removeNonProperties(matches, "location", user["preferences"]["location"]);
+    removeNonProperties(matches, "gender", user["preferences"]["gender"]);
+    removeCompareProperties(matches, "age", user["preferences"]["minage"], -1);
+    removeCompareProperties(matches, "age", user["preferences"]["maxage"], 1);
+  }
+  sortJsonArrayByProperty(matches, "name", 1);
+  console.log(matches);
+  res.render('matches', {"buttonText": "MESSAGE", "users": matches, "prefs": user["preferences"]});
 };
 
 function getUserByName(objArray, user){

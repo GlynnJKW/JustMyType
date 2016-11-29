@@ -86,29 +86,12 @@
       }
     },
     {
-      "name": " ",
-      "username": "kenmasters",
-      "password": "shoryuken",
-      "gender": "Male",
-      "age": "",
-      "mbti": "ISTJ",
-      "location": "San Diego",
-      "image": "/images/boy1.jpg",
-      "preferences": {
-        "gender": "Male",
-        "minage": "19",
-        "maxage": "26",
-        "mbti": "ESFP",
-        "location": "San Diego"
-      }
-    },
-    {
       "name": "Ken Masters",
       "username": "kenmasters",
       "password": "shoryuken",
       "gender": "Male",
       "age": "21",
-      "mbti": "ENFJ",
+      "mbti": "ESFP",
       "location": "San Diego",
       "image": "/images/boy1.jpg",
       "preferences": {
