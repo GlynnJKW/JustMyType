@@ -113,10 +113,10 @@ $(document).ready(function () {
 
   $('#preferencesForm').submit(function(event){
     var preferencesData = {
-      'gender': $('input[name=gender]').val(),
+      'gender': $('input[name=gender]:checked').val(),
       'minage': $('input[name=minage]').val(),
       'maxage': $('input[name=maxage]').val(),
-      'location': $('input[name=location]').val(),
+      'location': $('input[name=location]:checked').val(),
       'mbti': $('select[name=mbti] option:selected').text(),
     };
     console.log(preferencesData);

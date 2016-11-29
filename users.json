@@ -10,7 +10,7 @@
       "image": "/images/boy2.jpg",
       "location": "San Diego",
       "preferences": {
-        "gender": "Male",
+        "gender": "Female",
         "minage": "19",
         "maxage": "26",
         "mbti": "ESFP",

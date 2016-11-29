@@ -63,6 +63,7 @@ exports.changePreferences = function(req,res){
     found["minage"] = req.body.minage;
     found["maxage"] = req.body.maxage;
     found["mbti"] = req.body.mbti;
+    console.log(req.body.gender);
     fs.writeFile("./users.json", JSON.stringify(file, null, '  '), function (err) {
         console.log("wrote");
         if (err) next(err);
